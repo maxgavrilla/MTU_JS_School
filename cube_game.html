@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <script src = "bootstrap-4.5.3-dist/css/bootstrap.min.css"></script>
+    <style>
+        .square {
+         width: 70px;
+         height: 70px;
+         display: inline-block;
+         background: white;       
+        }
+
+        /* #container {
+            display: inline;
+        } */
+        .square_red {
+            background: red;
+        }
+
+                /*
+        * Blog posts
+        */
+        .blog-post {
+        margin-bottom: 4rem;
+        }
+        .blog-post-title {
+        margin-bottom: .25rem;
+        font-size: 2.5rem;
+        }
+        .blog-post-meta {
+        margin-bottom: 1.25rem;
+        color: #999;
+        }
+
+        /* Pagination */
+        .blog-pagination {
+        margin-bottom: 4rem;
+        }
+        .blog-pagination > .btn {
+        border-radius: 2rem;
+        }
+
+        /*
+        * Footer
+        */
+        .blog-footer {
+        padding: 2.5rem 0;
+        color: #999;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-top: .05rem solid #e5e5e5;
+        }
+        .blog-footer p:last-child {
+        margin-bottom: 0;
+        }
+        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1.5rem;
+        }
+        .lh-condensed {
+            line-height: 1.25;
+        }
+        .game-header {
+            background-color: #e9ecef;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="game-header px-3 py-3 pt-md-5 pb-md-4 mx-auto">
+        <h1 class="display-4">Kill Square Game</h1>
+        <div class="container">
+            <div class="card-deck mb-3 text-center">
+                <div class="mb-3">
+                  <div class="card-body">
+                    <button id="buttonStartStopGame" type="button" class="btn btn-lg btn-block btn-primary">Start Game</button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="card-body">
+                    <button id="buttonNewGame" type="button" class="btn btn-lg btn-block btn-primary">New Game</button>
+                  </div>
+                </div>
+                <div class="card mb-3 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Points</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 id="points" class="card-title pricing-card-title">0</h1>
+                  </div>
+                </div>
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Time left</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1  class="card-title pricing-card-title"><span id="timeMinutes">00</span>:<span id="timeSeconds">00</span></h1>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <main class="container px-3 py-3 pt-md-5 pb-md-4 mx-auto">
+        <div class="row">
+          <div class="col-md-8 blog-main">
+            <div id = "container-square">
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+            </div> 
+          </div><!-- /.blog-main -->
+      
+          <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="d-flex justify-content-between align-items-center text-muted">
+                    Result Table
+                </h4>
+              <!-- <h4 class="font-italic">Result Table</h4> -->
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="my-0">Product name</h6>
+                  </div>
+                  <span class="text-muted">12</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="my-0">Second product</h6>
+                  </div>
+                  <span class="text-muted">8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="my-0">Third item</h6>
+                  </div>
+                  <span class="text-muted">5</span>
+                </li>
+              </ul>
+            </div>
+          </aside><!-- /.blog-sidebar -->
+      
+        </div><!-- /.row -->
+      
+      </main><!-- /.container -->
+      
+      <footer class="blog-footer">
+        <p>Game build by <a href="https://getbootstrap.com/">Max Havrylov</a></p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
+</body>
+<script>
+    let count = 0;
+    let minutes = 1;
+    let seconds = 59;
+    let timerId;
+    let elemSquare = document.querySelectorAll("div > span");
+    let elemContainer = document.getElementById("container-square");
+    let buttonStartStopGame = document.getElementById("buttonStartStopGame");
+    let buttonNewGame = document.getElementById("buttonNewGame");
+    let pointsView = document.getElementById("points");
+    let timeMinutesView = document.getElementById("timeMinutes");
+    let timeSecondsView = document.getElementById("timeSeconds");
+    buttonStartStopGame.addEventListener("click", function(e){startStopGameButton(e)}, false);
+    buttonNewGame.addEventListener("click", newGame, false);
+    elemContainer.addEventListener("click", function(e){onClickRedToWhite(e)}, false);
+    
+    function startStopGameButton(e) {
+        if (e.target.innerHTML === 'Start Game') {
+            e.target.innerHTML = 'Pause Game';
+            e.target.classList.remove("btn-primary");
+            e.target.classList.add("btn-danger");
+            startGame();    
+        } else {
+            e.target.classList.remove("btn-danger");
+            e.target.classList.add("btn-primary"); 
+            e.target.innerHTML = 'Start Game';
+            pauseGame();
+        }
+        // e.target.outerText = e.target.outerText === 'Start Game' ? 'Stop Game' : 'Start Game';
+        // let timerId = setInterval(randomWhiteToRed, 1000);
+        
+        // for (let i = 0; i <= elemSquare.length/3; i++) {
+        //     let targetElem = elemSquare[Math.floor(Math.random() * elemSquare.length)];
+        //     if (targetElem.className === '') {
+        //         targetElem.classList.toggle("square_red");
+        //     }
+        // }
+    }
+
+    function startGame() {
+        
+        timeMinutesView.innerHTML = minutes;
+        timerId = setInterval(timeLeft, 1000);
+        randomWhiteToRed(5);
+
+    }
+
+    function newGame() {
+        console.log("newGame");
+    }
+
+    function timeLeft(){   
+        minutes --; 
+            if(minutes >= 0){
+                timeMinutesView.innerHTML = minutes;
+                timeSecondsView.innerHTML = seconds;
+            } else {
+                seconds --;
+                if(seconds >= 0){
+                    timeSecondsView.innerHTML = seconds;
+                } else {
+                    clearInterval(timerId);
+                    alert('Game Over ' + 'count=' + count); 
+                }
+            }
+    }
+    
+    function randomWhiteToRed(quantityEqual) {
+            for (let i = 0; i <= quantityEqual; i++) {
+                let targetElem = elemSquare[Math.floor(Math.random() * elemSquare.length)];
+                if (targetElem.className != 'square_red') {
+                    targetElem.classList.add("square_red");
+                }
+            }
+    }
+
+    function onClickRedToWhite(e) {
+        
+        if (e.target.tagName === "SPAN" && e.target.className == "square square_red") {
+            e.target.classList.remove("square_red");
+            count++;
+            pointsView.innerHTML = count;
+            let randomAddEqual = Math.floor(Math.random() * 3);
+            randomWhiteToRed(randomAddEqual);
+        }       
+    }
+
+</script>
+</html>
