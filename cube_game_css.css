@@ -1,0 +1,59 @@
+.square {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background: white;       
+   }
+
+/* #container {
+    display: inline;
+} */
+.square_red {
+    background: red;
+}
+
+        /*
+* Blog posts
+*/
+.blog-post {
+margin-bottom: 4rem;
+}
+.blog-post-title {
+margin-bottom: .25rem;
+font-size: 2.5rem;
+}
+.blog-post-meta {
+margin-bottom: 1.25rem;
+color: #999;
+}
+
+/* Pagination */
+.blog-pagination {
+margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+border-radius: 2rem;
+}
+
+/*
+* Footer
+*/
+.blog-footer {
+padding: 2.5rem 0;
+color: #999;
+text-align: center;
+background-color: #f9f9f9;
+border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+margin-bottom: 0;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+margin-bottom: 1.5rem;
+}
+.lh-condensed {
+    line-height: 1.25;
+}
+.game-header {
+    background-color: #e9ecef;
+}
