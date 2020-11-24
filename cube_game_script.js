@@ -1,4 +1,4 @@
-let resultGame = {};
+let resultGame;
 let count = 0;
 let minutes = 1;
 let seconds = 59;
@@ -20,6 +20,19 @@ elemContainer.addEventListener("click", function(e){onClickRedToWhite(e)}, false
 buttonStartStopGame.addEventListener("click", function(e){startStopGameButton(e)}, false);
 buttonResetGame.addEventListener("click", resetGame, false);
 modalButton.addEventListener("click", saveName, false);
+
+$('form').on("keypress", function (e) {
+    if (e.which == 13) {
+        saveName();
+    };
+});
+
+if (localStorage.getItem("squareKillerResultsList")) {
+    resultGame = JSON.parse(localStorage.getItem("squareKillerResultsList"));
+    addDataToTableScore();
+} else {
+    resultGame = {};
+}
 
 function startStopGameButton(e) {
     if (e.target.innerHTML === 'Start Game') {
@@ -64,6 +77,7 @@ function resetGame() {
     timeMinutesView.innerHTML = "00";
     timeSecondsView.innerHTML = "00";
     modalInput.value = "";
+    localStorage.setItem('squareKillerResultsList', JSON.stringify(resultGame));
     addDataToTableScore();
 }
 
