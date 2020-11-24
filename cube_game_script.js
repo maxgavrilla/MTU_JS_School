@@ -36,7 +36,7 @@ function startStopGameButton(e) {
 }
 
 function startGame() {
-    if(minutes >= 0){
+    if(minutes > 0){
         timeMinutesView.innerHTML = timeString + minutes;
         randomWhiteToRed(10);
         buttonResetGame.classList.remove("disabled");
