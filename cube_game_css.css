@@ -57,3 +57,6 @@ margin-bottom: 1.5rem;
 .game-header {
     background-color: #e9ecef;
 }
+.disabled {
+    pointer-events: none;
+}

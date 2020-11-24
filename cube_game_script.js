@@ -39,6 +39,7 @@ function startGame() {
     if(minutes >= 0){
         timeMinutesView.innerHTML = timeString + minutes;
         randomWhiteToRed(10);
+        buttonResetGame.classList.remove("disabled");
     }
     timerId = setInterval(timeLeft, 1000);
 }
@@ -53,7 +54,8 @@ function resetGame() {
         elemSquare[j].classList.remove("square_red");
     }
     buttonStartStopGame.classList.remove("btn-danger");
-    buttonStartStopGame.classList.add("btn-primary"); 
+    buttonStartStopGame.classList.add("btn-primary");
+    buttonResetGame.classList.add("disabled");
     buttonStartStopGame.innerHTML = 'Start Game';
     count = 0;
     minutes = 1;
